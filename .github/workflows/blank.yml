@@ -42,9 +42,8 @@ on:
 jobs:
   greet: 
     runs-on: ubuntu-latest 
-      
     steps:
-      - name: Send greeting 
-        run: echo "Hello ${{github.event.inputs.name}}"
+      - name: Check VMName 
+        run: echo " ${{github.event.inputs.VMNameApp}}"
       - name: location check  
         run: echo "location ${{github.event.inputs.location}}"
