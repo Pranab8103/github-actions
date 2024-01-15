@@ -2,20 +2,20 @@ name: "Terraform"
 on: 
   push:
   workflow_dispatch:
-  inputs:
-    name: 
-      description: 'Person to greet'
-      required: true
-    location:
-      description: "location"
-      required: true
+    inputs:
+      name: 
+        description: 'Person to greet'
+        required: true
+      location:
+        description: "location"
+        required: true
 
-  jobs:
-    greet: 
-      runs-on: ubuntu-latest 
+jobs:
+  greet: 
+    runs-on: ubuntu-latest 
       
-      steps:
-        - name: Send greeting 
-          run: echo "Hello ${{github.event.inputs.name}}"
-        - name: location check  
-          run: echo "location ${{github.event.inputs.location}}"
+    steps:
+      - name: Send greeting 
+        run: echo "Hello ${{github.event.inputs.name}}"
+      - name: location check  
+        run: echo "location ${{github.event.inputs.location}}"
