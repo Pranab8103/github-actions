@@ -2,36 +2,36 @@ name: "Terraform"
 on: 
   workflow_dispatch:
     inputs:
-      name: 
-        description: 'rgname'
-        required: true
-      location:
-        description: "location"
-        required: true
-      VnetName:
-        description: 'vnetName'
-        required: true
-      VnetRGName:
-        description: "vnetRGName"
-        required: true
-      SubnetNameApp:
-        description: "SubnetNameApp"
-        required: true
-      VMNameApp:
-        description: "VMNameApp"
-        required: true
-      VMNamedb:
-        description: "VMNamedb"
-        required: true
-      vmSize:
-        description: "VM-Size"
-        required: true
-      ImageDefinitionID:
-        description: "Image-Definition"
-        required: true
-      DiskSKU:
-        description: "Disk-SKU"
-        required: true 
+      # name: 
+      #   description: 'rgname'
+      #   required: true
+      # location:
+      #   description: "location"
+      #   required: true
+      # VnetName:
+      #   description: 'vnetName'
+      #   required: true
+      # VnetRGName:
+      #   description: "vnetRGName"
+      #   required: true
+      # SubnetNameApp:
+      #   description: "SubnetNameApp"
+      #   required: true
+      # VMNameApp:
+      #   description: "VMNameApp"
+      #   required: true
+      # VMNamedb:
+      #   description: "VMNamedb"
+      #   required: true
+      # vmSize:
+      #   description: "VM-Size"
+      #   required: true
+      # ImageDefinitionID:
+      #   description: "Image-Definition"
+      #   required: true
+      # DiskSKU:
+      #   description: "Disk-SKU"
+      #   required: true 
       AdminUser:
         description: "Admin User"
         required: true
@@ -44,6 +44,6 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - name: Check VMName 
-        run: echo " ${{github.event.inputs.VMNameApp}}"
+        run: echo " ${{github.event.inputs.AdminUser}}"
       - name: location check  
-        run: echo "location ${{github.event.inputs.location}}"
+        run: echo "location ${{github.event.inputs.AdminPass}}"
